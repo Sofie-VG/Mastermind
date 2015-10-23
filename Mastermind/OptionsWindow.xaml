@@ -1,0 +1,34 @@
+﻿<Window x:Class="Mastermind.OptionsWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Mastermind"
+        mc:Ignorable="d"
+        WindowStartupLocation="Manual" 
+        Left="100" Top="10"
+        Title="Mastermind - Options" Height="700" MinHeight="300" Width="600" MinWidth="400" ResizeMode="CanResizeWithGrip">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition />
+            <RowDefinition Height="20"/>
+        </Grid.RowDefinitions>
+
+        <!-- Top row -->
+        <Canvas Grid.Row="0" Background="#FF919191" />
+        <Label Grid.Row="0" Content="Mastermind" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="40" FontFamily="Showcard Gothic" Foreground="White"/>
+
+        <!-- Middle row -->
+        <StackPanel Grid.Row="1">
+            <Label Content="Enter your name:" HorizontalAlignment="Left" Height="30" Margin="100,10,0,0" VerticalAlignment="Top" />
+            <TextBox x:Name="nameBox" Text="{Binding Path=PlayerName}"  HorizontalAlignment="Left" Height="30" Margin="100,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" />
+            <Button x:Name="newGameButton" Content="Start new game" HorizontalAlignment="Left" Height="30" Margin="100,10,0,0" VerticalAlignment="Top" Click="button_Click" />
+        </StackPanel>
+
+        <!-- Bottom row -->
+        <Canvas Grid.Row="2" Background="#FF919191" />
+        <Label Grid.Row="2" Content="Created by SofieVG" Margin="0,0,10,0" HorizontalAlignment="Right" VerticalAlignment="Center" FontSize="10" FontFamily="Arial" Foreground="White"/>
+
+    </Grid>
+</Window>
